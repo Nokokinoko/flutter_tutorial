@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-
-const Color kAccentColor = Color(0xFFFE7C64);
-const Color kTextColorPrimary = Color(0xFFECEFF1);
-const Color kTextColorSecondary = Color(0xFFB0BEC5);
-const Color kButtonColorPrimary = Color(0xFFECEFF1);
-const Color kButtonTextColorPrimary = Color(0xFF455A64);
+import 'package:tutorial/constant/colors.dart';
 
 class _CustomTextField extends StatelessWidget {
   final String labelText;
@@ -24,18 +19,18 @@ class _CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: labelText,
         hintText: hintText,
-        hintStyle: const TextStyle(color: kTextColorSecondary),
+        hintStyle: const TextStyle(color: kSignInTextColorSecondary),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(
-            color: kAccentColor,
+            color: kSignInAccentColor,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(
-            color: kTextColorSecondary,
+            color: kSignInTextColorSecondary,
           ),
         ),
       ),
@@ -46,6 +41,8 @@ class _CustomTextField extends StatelessWidget {
 }
 
 class SignInForm extends StatelessWidget {
+  const SignInForm({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -67,15 +64,15 @@ class SignInForm extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .bodyText2!
-              .copyWith(color: kTextColorSecondary),
+              .copyWith(color: kSignInTextColorSecondary),
         ),
         const SizedBox(height: 48),
         SizedBox(
           width: double.infinity,
           child: TextButton(
             style: TextButton.styleFrom(
-              foregroundColor: kButtonTextColorPrimary,
-              backgroundColor: kButtonColorPrimary,
+              foregroundColor: kSignInButtonTextColorPrimary,
+              backgroundColor: kSignInButtonColorPrimary,
               padding: const EdgeInsets.symmetric(vertical: 16),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
@@ -87,7 +84,7 @@ class SignInForm extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .button!
-                  .copyWith(color: kButtonColorPrimary, fontSize: 18),
+                  .copyWith(color: kSignInButtonColorPrimary, fontSize: 18),
             ),
           ),
         ),
@@ -97,7 +94,7 @@ class SignInForm extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .bodyText2!
-              .copyWith(color: kTextColorSecondary),
+              .copyWith(color: kSignInTextColorSecondary),
         ),
         const SizedBox(height: 16),
         Text(
@@ -105,7 +102,7 @@ class SignInForm extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .bodyText2!
-              .copyWith(color: kTextColorPrimary),
+              .copyWith(color: kSignInTextColorPrimary),
         ),
         const SizedBox(height: 24),
         Row(
@@ -116,7 +113,7 @@ class SignInForm extends StatelessWidget {
               onPressed: () {},
             ),
             Container(
-              color: kTextColorSecondary,
+              color: kSignInTextColorSecondary,
               width: 1,
               height: 16,
             ),
@@ -132,6 +129,8 @@ class SignInForm extends StatelessWidget {
 }
 
 class Footer extends StatelessWidget {
+  const Footer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -142,7 +141,7 @@ class Footer extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .bodyText2!
-              .copyWith(color: kTextColorSecondary),
+              .copyWith(color: kSignInTextColorSecondary),
         ),
         const SizedBox(width: 4),
         Text(
@@ -150,7 +149,7 @@ class Footer extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .bodyText2!
-              .copyWith(color: kTextColorPrimary),
+              .copyWith(color: kSignInTextColorPrimary),
         ),
       ],
     );

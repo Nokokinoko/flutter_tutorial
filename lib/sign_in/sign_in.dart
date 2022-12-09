@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial/constant/colors.dart';
 import 'header.dart';
 import 'form.dart';
-
-const Color kBackgroundColor = Color(0xFF192830);
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -10,18 +9,18 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: kSignInBackgroundColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Header(),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
+              const Header(),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 32),
                 child: SignInForm(),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 64),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 64),
                 child: Footer(),
               ),
             ],

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-
-const Color kTextColorPrimary = Color(0xFFECEFF1);
-const Color kButtonColorPrimary = Color(0xFFECEFF1);
-const Color kIconColor = Color(0xFF455A64);
+import 'package:tutorial/constant/colors.dart';
 
 class _HeaderCurveClipper extends CustomClipper<Path> {
   @override
@@ -111,7 +108,7 @@ class _HeaderTitle extends StatelessWidget {
         Text(
           'Welcome',
           style: Theme.of(context).textTheme.headline4!.copyWith(
-                color: kTextColorPrimary,
+                color: kSignInTextColorPrimary,
                 fontWeight: FontWeight.w500,
               ),
         ),
@@ -121,7 +118,7 @@ class _HeaderTitle extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .subtitle2!
-              .copyWith(color: kTextColorPrimary),
+              .copyWith(color: kSignInTextColorPrimary),
         ),
       ],
     );
@@ -133,19 +130,21 @@ class _HeaderBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-        foregroundColor: kButtonColorPrimary,
+        foregroundColor: kSignInButtonColorPrimary,
         backgroundColor: Colors.transparent,
         shape: const CircleBorder(
-          side: BorderSide(color: kButtonColorPrimary),
+          side: BorderSide(color: kSignInButtonColorPrimary),
         ),
       ),
       onPressed: () {},
-      child: const Icon(Icons.chevron_left, color: kIconColor),
+      child: const Icon(Icons.chevron_left, color: kSignInIconColor),
     );
   }
 }
 
 class Header extends StatelessWidget {
+  const Header({super.key});
+
   @override
   Widget build(BuildContext context) {
     const double height = 320;
