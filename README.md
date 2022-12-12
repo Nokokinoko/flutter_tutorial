@@ -7,3 +7,6 @@ https://www.flutter-study.dev/create-ui/admin-mobile
 
 # SignIn
 https://www.flutter-study.dev/create-ui/sign-in-sign-up
+
+# BatteryOptimizer
+https://www.flutter-study.dev/create-ui/battery-optimizer
