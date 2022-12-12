@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial/battery_optimizer/app_list.dart';
-import 'package:tutorial/battery_optimizer/indicator.dart';
 import 'package:tutorial/constant/colors.dart';
+import 'app_list.dart';
+import 'indicator.dart';
 
 class BatteryOptimizerPage extends StatelessWidget {
   const BatteryOptimizerPage({super.key});
