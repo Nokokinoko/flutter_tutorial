@@ -20,8 +20,8 @@ class BatteryOptimizerPage extends StatelessWidget {
           children: [
             const OptimizerButtons(),
             const BatteryLevelIndicator(),
-            AppsDrainage(),
-            OptimizeNow(),
+            const AppsDrainage(),
+            const OptimizeNow(),
           ],
         ),
       ),
@@ -85,6 +85,8 @@ class OptimizerButtons extends StatelessWidget {
 }
 
 class OptimizeNow extends StatelessWidget {
+  const OptimizeNow({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -98,8 +100,10 @@ class OptimizeNow extends StatelessWidget {
           ),
         ),
         onPressed: () {},
-        child:
-            const Text('Optimize Now', style: TextStyle(color: Colors.white)),
+        child: const Text(
+          'Optimize Now',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }

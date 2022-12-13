@@ -41,6 +41,8 @@ class _AppColumn extends StatelessWidget {
 }
 
 class AppsDrainage extends StatelessWidget {
+  const AppsDrainage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
