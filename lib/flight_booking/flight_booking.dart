@@ -14,8 +14,8 @@ class FlightBookingPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          FlightInfo(),
-          TicketList(),
+          const FlightInfo(),
+          const TicketList(),
         ],
       ),
     );
