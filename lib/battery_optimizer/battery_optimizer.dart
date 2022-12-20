@@ -9,11 +9,14 @@ class BatteryOptimizerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: kBatteryOptimizerColorPrimary,
       appBar: AppBar(
         title: const Text('Battery Optimizer'),
         centerTitle: false,
         elevation: 0,
+        foregroundColor: kBatteryOptimizerTitleColor,
+        backgroundColor: kBatteryOptimizerColorPrimary,
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -24,6 +27,12 @@ class BatteryOptimizerPage extends StatelessWidget {
             const OptimizeNow(),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+        child: const Icon(Icons.home),
       ),
     );
   }
@@ -41,7 +50,7 @@ class _OptimizerButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white,
+        backgroundColor: kBatteryOptimizerColorPrimary,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
@@ -93,7 +102,7 @@ class OptimizeNow extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 24),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          foregroundColor: kBatteryOptimizerPurple,
+          backgroundColor: kBatteryOptimizerPurple,
           padding: const EdgeInsets.symmetric(horizontal: 48),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(24),
@@ -102,7 +111,7 @@ class OptimizeNow extends StatelessWidget {
         onPressed: () {},
         child: const Text(
           'Optimize Now',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: kBatteryOptimizerColorPrimary),
         ),
       ),
     );

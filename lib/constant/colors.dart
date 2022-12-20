@@ -10,6 +10,7 @@ const Color kSignInButtonTextColorPrimary = Color(0xFF455A64);
 const Color kSignInIconColor = Color(0xFF455A64);
 
 // Battery Optimizer
+const Color kBatteryOptimizerColorPrimary = Colors.white;
 const Color kBatteryOptimizerPurple = Color(0xFF8337EC);
 const Color kBatteryOptimizerPink = Color(0xFFFF006F);
 const Color kBatteryOptimizerIndicatorBegin = kBatteryOptimizerPink;

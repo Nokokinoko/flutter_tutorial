@@ -28,7 +28,7 @@ class _AirportName extends StatelessWidget {
         Text(
           fullName,
           style: TextStyle(
-            color: kFlightBookingTextColor.withOpacity(0.5),
+            color: kFlightBookingTextColor.withOpacity(0.8),
           ),
         ),
       ],
@@ -99,7 +99,7 @@ class FlightInfo extends StatelessWidget {
                   child: Text(
                     'Monday, 18 May, 2020',
                     style: TextStyle(
-                        color: kFlightBookingTextColor.withOpacity(0.5)),
+                        color: kFlightBookingTextColor.withOpacity(0.8)),
                   ),
                 ),
               ],

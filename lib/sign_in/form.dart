@@ -16,8 +16,10 @@ class _CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      style: const TextStyle(color: kSignInTextColorPrimary),
       decoration: InputDecoration(
         labelText: labelText,
+        labelStyle: const TextStyle(color: kSignInTextColorPrimary),
         hintText: hintText,
         hintStyle: const TextStyle(color: kSignInTextColorSecondary),
         floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -84,7 +86,7 @@ class SignInForm extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .button!
-                  .copyWith(color: kSignInButtonColorPrimary, fontSize: 18),
+                  .copyWith(color: kSignInButtonTextColorPrimary, fontSize: 18),
             ),
           ),
         ),
@@ -110,6 +112,7 @@ class SignInForm extends StatelessWidget {
           children: [
             IconButton(
               icon: const Icon(Icons.account_circle),
+              color: kSignInTextColorPrimary,
               onPressed: () {},
             ),
             Container(
@@ -119,6 +122,7 @@ class SignInForm extends StatelessWidget {
             ),
             IconButton(
               icon: const Icon(Icons.account_circle),
+              color: kSignInTextColorPrimary,
               onPressed: () {},
             ),
           ],

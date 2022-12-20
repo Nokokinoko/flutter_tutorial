@@ -7,7 +7,7 @@ class _HorizontalBorder extends StatelessWidget {
     return Container(
       height: 1,
       margin: const EdgeInsets.symmetric(horizontal: 16),
-      color: Colors.green[200],
+      color: Colors.grey[200],
     );
   }
 }
@@ -51,7 +51,8 @@ class AppsDrainage extends StatelessWidget {
           leading: ClipOval(
             child: Container(
               color: kBatteryOptimizerPurple,
-              child: const Icon(Icons.apps, color: Colors.white),
+              child:
+                  const Icon(Icons.apps, color: kBatteryOptimizerColorPrimary),
             ),
           ),
           title: const Text(
@@ -64,7 +65,7 @@ class AppsDrainage extends StatelessWidget {
           ),
         ),
         Material(
-          color: Colors.white,
+          color: kBatteryOptimizerColorPrimary,
           elevation: kBatteryOptimizerElevation,
           borderRadius: BorderRadius.circular(16),
           child: Column(

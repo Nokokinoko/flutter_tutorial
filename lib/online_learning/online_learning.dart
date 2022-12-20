@@ -283,18 +283,32 @@ class _OnlineLearningPageState extends State<OnlineLearningPage>
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _controller.forward().then((_) {
-            Navigator.of(context)
-                .push(
-                  PageRouteBuilder(
-                      pageBuilder: (_, __, ___) => const CoursesPage()),
-                )
-                .then((_) => _controller.reverse());
-          });
-        },
-        child: const Icon(Icons.list),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            heroTag: 'list',
+            onPressed: () {
+              _controller.forward().then((_) {
+                Navigator.of(context)
+                    .push(
+                      PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => const CoursesPage()),
+                    )
+                    .then((_) => _controller.reverse());
+              });
+            },
+            child: const Icon(Icons.list),
+          ),
+          const SizedBox(height: 16),
+          FloatingActionButton(
+            heroTag: 'home',
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Icon(Icons.home),
+          ),
+        ],
       ),
     );
   }

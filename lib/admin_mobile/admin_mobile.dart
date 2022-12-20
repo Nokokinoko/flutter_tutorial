@@ -14,6 +14,12 @@ class AdminMobilePage extends StatelessWidget {
           const Expanded(child: PostList()),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+        child: const Icon(Icons.home),
+      ),
     );
   }
 }
